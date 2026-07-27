@@ -1,0 +1,22 @@
+---
+description: Enforce the project's agent C# code style
+alwaysApply: true
+---
+
+# Agent code style
+
+Apply `agent-code-style.md` to every implementation and code review.
+
+- Name every private field with a leading underscore in camelCase: `_poolManager`.
+- Name every constant in `UPPER_SNAKE_CASE`: `TARGET_DISTANCE`.
+- Use `PascalCase` for public types, methods, and properties.
+- Name every event in `PascalCase` with an `On` prefix: `OnCurrentWaveChanged`.
+- Use `camelCase` for parameters and local variables.
+- Name `CancellationToken` values `ct` and `CancellationTokenSource` values `cts`; use `_cts` for a private source field.
+- Name interfaces with an `I` prefix.
+- Put every public class in its own matching C# file. Private nested types are allowed.
+- Never add generic `Scripts`, `Code`, or `Source` folders. Place code in the folder of its feature or mechanic.
+- Organize `Assets` by game feature or mechanic, never by resource type.
+- Do not add top-level `Scripts`, `Prefabs`, or `Textures` folders.
+- Keep scripts with the prefab and resources of their feature. Put shared features higher in the hierarchy and object-specific resources in nested object folders.
+- Do not introduce static state for gameplay systems.
