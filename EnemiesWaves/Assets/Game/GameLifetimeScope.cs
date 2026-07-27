@@ -25,15 +25,15 @@ namespace EnemiesWaves
             }
 
             builder.RegisterInstance(_waveSettings);
-            builder.RegisterInstance(new SpawnPointReference(_spawnPoint));
-            builder.RegisterInstance(new TargetPointReference(_targetPoint));
-            builder.RegisterInstance(new PoolRootReference(_poolRoot));
+            builder.RegisterInstance<ISpawnPointReference>(new SpawnPointReference(_spawnPoint));
+            builder.RegisterInstance<ITargetPointReference>(new TargetPointReference(_targetPoint));
+            builder.RegisterInstance<IPoolRootReference>(new PoolRootReference(_poolRoot));
             builder.RegisterComponent(_waveHudView);
 
-            builder.Register<PoolManager>(Lifetime.Singleton);
+            builder.Register<PoolManager>(Lifetime.Singleton).AsImplementedInterfaces();
             builder.RegisterEntryPoint<PoolPreloader>().AsSelf();
-            builder.RegisterEntryPoint<WaveSpawner>().AsSelf();
-            builder.Register<WaveHudModel>(Lifetime.Singleton);
+            builder.RegisterEntryPoint<WaveSpawner>().AsSelf().AsImplementedInterfaces();
+            builder.Register<WaveHudModel>(Lifetime.Singleton).AsImplementedInterfaces();
             builder.RegisterEntryPoint<WaveHudPresenter>();
         }
     }

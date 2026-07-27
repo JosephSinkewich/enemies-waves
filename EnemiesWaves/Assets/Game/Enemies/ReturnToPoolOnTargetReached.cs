@@ -9,13 +9,13 @@ namespace EnemiesWaves.Enemies
     {
         private const float TARGET_DISTANCE = 0.01f;
 
-        private PoolManager _poolManager;
+        private IPoolManager _poolManager;
         private Transform _target;
         private Action<GameObject> _returnCallback;
         private bool _isInitialized;
 
         [Inject]
-        public void Construct(PoolManager poolManager)
+        public void Construct(IPoolManager poolManager)
         {
             _poolManager = poolManager;
         }

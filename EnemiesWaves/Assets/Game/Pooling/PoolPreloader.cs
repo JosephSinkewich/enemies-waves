@@ -7,9 +7,9 @@ namespace EnemiesWaves.Pooling
     public sealed class PoolPreloader : IInitializable
     {
         private readonly WaveSettings _settings;
-        private readonly PoolManager _poolManager;
+        private readonly IPoolManager _poolManager;
 
-        public PoolPreloader(WaveSettings settings, PoolManager poolManager)
+        public PoolPreloader(WaveSettings settings, IPoolManager poolManager)
         {
             _settings = settings;
             _poolManager = poolManager;

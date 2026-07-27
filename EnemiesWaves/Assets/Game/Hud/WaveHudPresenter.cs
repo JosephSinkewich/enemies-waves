@@ -5,10 +5,10 @@ namespace EnemiesWaves.UI
 {
     public sealed class WaveHudPresenter : IInitializable, IDisposable
     {
-        private readonly WaveHudModel _model;
+        private readonly IWaveHudModel _model;
         private readonly WaveHudView _view;
 
-        public WaveHudPresenter(WaveHudModel model, WaveHudView view)
+        public WaveHudPresenter(IWaveHudModel model, WaveHudView view)
         {
             _model = model;
             _view = view;

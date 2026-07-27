@@ -10,12 +10,12 @@ using VContainer.Unity;
 
 namespace EnemiesWaves.Spawning
 {
-    public sealed class WaveSpawner : IStartable, IDisposable
+    public sealed class WaveSpawner : IWaveSpawner, IStartable, IDisposable
     {
         private readonly WaveSettings _settings;
-        private readonly PoolManager _poolManager;
-        private readonly SpawnPointReference _spawnPoint;
-        private readonly TargetPointReference _targetPoint;
+        private readonly IPoolManager _poolManager;
+        private readonly ISpawnPointReference _spawnPoint;
+        private readonly ITargetPointReference _targetPoint;
         private readonly HashSet<GameObject> _activeEnemies = new();
         private readonly CancellationTokenSource _cts = new();
 
@@ -24,9 +24,9 @@ namespace EnemiesWaves.Spawning
 
         public WaveSpawner(
             WaveSettings settings,
-            PoolManager poolManager,
-            SpawnPointReference spawnPoint,
-            TargetPointReference targetPoint)
+            IPoolManager poolManager,
+            ISpawnPointReference spawnPoint,
+            ITargetPointReference targetPoint)
         {
             _settings = settings;
             _poolManager = poolManager;

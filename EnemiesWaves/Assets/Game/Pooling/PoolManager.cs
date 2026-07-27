@@ -5,7 +5,7 @@ using VContainer.Unity;
 
 namespace EnemiesWaves.Pooling
 {
-    public sealed class PoolManager
+    public sealed class PoolManager : IPoolManager
     {
         private sealed class Pool
         {
@@ -18,7 +18,7 @@ namespace EnemiesWaves.Pooling
         private readonly Dictionary<GameObject, GameObject> _instancePrefabs = new();
         private readonly HashSet<GameObject> _warnedPrefabs = new();
 
-        public PoolManager(IObjectResolver resolver, PoolRootReference poolRootReference)
+        public PoolManager(IObjectResolver resolver, IPoolRootReference poolRootReference)
         {
             _resolver = resolver;
             _poolRoot = poolRootReference.Transform;

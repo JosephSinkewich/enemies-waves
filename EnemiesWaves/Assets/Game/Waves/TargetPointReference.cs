@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace EnemiesWaves.Spawning
 {
-    public sealed class TargetPointReference
+    public sealed class TargetPointReference : ITargetPointReference
     {
         public TargetPointReference(Transform transform) => Transform = transform;
 

@@ -3,11 +3,11 @@ using EnemiesWaves.Spawning;
 
 namespace EnemiesWaves.UI
 {
-    public sealed class WaveHudModel : IDisposable
+    public sealed class WaveHudModel : IWaveHudModel, IDisposable
     {
-        private readonly WaveSpawner _spawner;
+        private readonly IWaveSpawner _spawner;
 
-        public WaveHudModel(WaveSpawner spawner)
+        public WaveHudModel(IWaveSpawner spawner)
         {
             _spawner = spawner;
             State = new WaveHudState(spawner.CurrentWave, spawner.EnemyActiveCount);

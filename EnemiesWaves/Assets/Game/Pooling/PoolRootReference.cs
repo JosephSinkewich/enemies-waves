@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace EnemiesWaves.Pooling
 {
-    public sealed class PoolRootReference
+    public sealed class PoolRootReference : IPoolRootReference
     {
         public PoolRootReference(Transform transform) => Transform = transform;
 
