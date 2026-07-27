@@ -105,3 +105,6 @@ InitTestScene*.unity*
 
 # Auto-generated cache in Assets folder
 /EnemiesWaves/[Aa]ssets/[Ss]ceneDependencyCache*
+
+# Screenshots captured during agent verification
+/EnemiesWaves/Assets/Screenshots/
