@@ -1,0 +1,8 @@
+{
+  "name": "EnemiesWaves.Game",
+  "references": [
+    "VContainer",
+    "UniTask",
+    "Unity.TextMeshPro"
+  ]
+}

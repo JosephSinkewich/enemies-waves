@@ -1,0 +1,12 @@
+{
+  "name": "EnemiesWaves.EditorTests",
+  "references": [
+    "EnemiesWaves.Game"
+  ],
+  "includePlatforms": [
+    "Editor"
+  ],
+  "optionalUnityReferences": [
+    "TestAssemblies"
+  ]
+}

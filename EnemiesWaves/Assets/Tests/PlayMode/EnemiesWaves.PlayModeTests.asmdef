@@ -1,0 +1,9 @@
+{
+  "name": "EnemiesWaves.PlayModeTests",
+  "references": [
+    "EnemiesWaves.Game"
+  ],
+  "optionalUnityReferences": [
+    "TestAssemblies"
+  ]
+}
